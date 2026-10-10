@@ -1,0 +1,30 @@
+{
+  "name": "d2-team-stats",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "pnpm run --parallel \"/^dev:/\"",
+    "dev:api": "node --watch-path=server server/index.ts",
+    "dev:web": "vite",
+    "build": "vite build",
+    "start": "node server/index.ts",
+    "sync": "node server/sync-cli.ts",
+    "typecheck": "tsc -p tsconfig.server.json && tsc -p tsconfig.web.json",
+    "screenshots": "node scripts/screenshots.ts"
+  },
+  "dependencies": {
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4"
+  }
+}
